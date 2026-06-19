@@ -1,5 +1,11 @@
 body {
-    color: rgb(3, 112, 185);
+    color: #142d4c;
+    padding: 30px;
+}
+
+h1 {
+    color: #385170;
+
 }
 
 .center {
@@ -19,21 +25,11 @@ body {
 }
 
 .colorp {
-    color: rgb(12, 13, 14);
-}
-
-.colorbgr {
-    background: linear-gradient(rgb(245, 110, 0), white, rgb(49, 166, 187));
+    color: #ececec;
 }
 
 .souligne {
     text-decoration: underline;
-}
-
-.entourer {
-    border-width: 0px;
-    border-style: dotted;
-    border-color: rgb(3, 79, 129);
 }
 
 #titre {
@@ -51,12 +47,14 @@ body {
     display: flex;
     justify-content: space-between;
     gap: 90px;
+
 }
 
 #img {
     display: flex;
     justify-content: space-around;
-    align-items: flex-end;
+    align-items: center;
+    margin-top: 30px;
 }
 
 #title-brg {
@@ -66,9 +64,14 @@ body {
 
 #section-beauregard div {
     display: flex;
-    gap: 200px;
+    gap: 100px;
 }
-
+   
+.shadow {
+    box-shadow:
+        #142d4c 9px -9px 5px 2px,
+        #e68311 20px -19px 20px 3px;
+}
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -86,18 +89,16 @@ a {
 }
 
 a:hover {
-    color: rgb(78, 38, 0);
+    color: #9fd3c7
 }
 
-p:hover {
-    transform: scale(1.01);
-}
-
-p {
+.scale {
     transition: transform 0.3s ease;
 }
 
-
+.scale:hover {
+    transform: scale(1.05);
+}
 
 @keyframes scale {
     0% {
@@ -105,12 +106,8 @@ p {
     }
 
     100% {
-        transform: scale(1.05);
+        transform: scale(1.03);
     }
-}
-
-h1 {
-    animation: gauche-droite 1.6s linear 2;
 }
 
 @keyframes gauche-droite {
@@ -129,18 +126,35 @@ h1 {
 
 @keyframes gauche-droite {
     25% {
-        transform: translateX(-3px)
+        transform: translateX(-1.5px)
     }
 
     75% {
-        transform: translateX(3px)
+        transform: translateX(1.5px)
     }
 }
+
 .filtre {
     filter: grayscale(1);
     transition: filter 0.2s ease-in-out;
 }
 
 .filtre:hover {
-      filter: grayscale(0);  
+    filter: grayscale(0);
+}
+
+.first-color {
+    background: #ececec;
+}
+
+.second-color {
+    background: #9fd3c7;
+}
+
+.third-color {
+    background: #385170;
+}
+
+.fourth-color {
+    background: #142d4c;
 }
