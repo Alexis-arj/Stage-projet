@@ -37,7 +37,8 @@ body {
 }
 
 #titre {
-    display: flex justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 #sous-titre-sfi {
@@ -65,31 +66,81 @@ body {
 
 #section-beauregard div {
     display: flex;
-    flex-grow: 1;
-    gap: 290px;
+    gap: 200px;
 }
-body{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
 #img img:hover {
     transform: scale(1.05);
 }
+
 #img img {
     transition: transform 0.2s ease-in-out;
 }
 
-
-#titre:hover {
-    transform:scaleX(1.05);   
-}
-#titre {
-    transition: transform 1.5 ease-in-out;
-}
-
-
 a {
     transition: color 0.1 ease;
 }
+
 a:hover {
     color: rgb(78, 38, 0);
+}
+
+p:hover {
+    transform: scale(1.01);
+}
+
+p {
+    transition: transform 0.3s ease;
+}
+
+
+
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+h1 {
+    animation: gauche-droite 1.6s linear 2;
+}
+
+@keyframes gauche-droite {
+    25% {
+        transform: translateX(-10px);
+    }
+
+    75% {
+        transform: translateX(10px);
+    }
+}
+
+#img img {
+    animation: gauche-droite 1s ease-in-out infinite;
+}
+
+@keyframes gauche-droite {
+    25% {
+        transform: translateX(-3px)
+    }
+
+    75% {
+        transform: translateX(3px)
+    }
+}
+.filtre {
+    filter: grayscale(1);
+    transition: filter 0.2s ease-in-out;
+}
+
+.filtre:hover {
+      filter: grayscale(0);  
 }
