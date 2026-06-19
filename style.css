@@ -27,14 +27,13 @@ h1 {
 .colorp {
     color: #ececec;
 }
-
 .souligne {
     text-decoration: underline;
 }
-
 #titre {
     display: flex;
     justify-content: center;
+    gap: 90px;
 }
 
 #sous-titre-sfi {
@@ -155,4 +154,7 @@ a:hover {
 
 .fourth-color {
     background: #142d4c;
+}
+#canard {
+    display: none;
 }
